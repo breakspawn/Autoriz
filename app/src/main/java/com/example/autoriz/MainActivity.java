@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     private Button registr;
 
 
-    private static final String email_txt = "breakspawn1@gmail.com";
+    private static final String email_txt = "1";
     private static final String pass_txt  = "1";
 
 
