@@ -16,7 +16,9 @@
         android:layout_height="310dp"
         android:backgroundTint="#FFFFFF"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
+        tools:layout_editor_absoluteY="0dp"
+        tools:ignore="MissingConstraints" />
+
 
     <SeekBar
         android:id="@+id/seekBar"
