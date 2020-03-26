@@ -9,6 +9,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Empty2">
+            <intent-filter>
+                <action android:name="com.example.autoriz.Empty2" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Frag">
+            <intent-filter>
+                <action android:name="com.example.autoriz.Frag" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
         <activity android:name=".Empty">
             <intent-filter>
                 <action android:name="com.example.autoriz.Empty" />

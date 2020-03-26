@@ -6,8 +6,8 @@
     android:id="@+id/emp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#685454"
-    android:backgroundTint="#614E4E"
+    android:background="#313A43"
+    android:backgroundTint="#313A43"
     tools:context=".Empty">
 
     <ListView
@@ -15,9 +15,9 @@
         android:layout_width="408dp"
         android:layout_height="310dp"
         android:backgroundTint="#FFFFFF"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp"
-        tools:ignore="MissingConstraints" />
+        tools:layout_editor_absoluteY="0dp" />
 
 
     <SeekBar
@@ -27,6 +27,8 @@
         android:backgroundTint="#706161"
         android:foregroundTint="#631515"
         android:indeterminateTint="#CFA0A0"
+        android:max="5"
+        android:progress="0"
         android:progressBackgroundTint="#BC1F1F"
         android:progressTint="#FFFFFF"
         android:secondaryProgressTint="#803A3A"
@@ -36,8 +38,6 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:progress="0"
-        android:max="5"
         app:tickMarkTint="#5C2222" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
