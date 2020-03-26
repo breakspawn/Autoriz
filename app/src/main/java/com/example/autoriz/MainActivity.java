@@ -21,14 +21,14 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ImageView img;
+    private ImageView img;  //назнаение переменных
     private EditText email;
     private EditText pass;
     private Button enter;
     private Button registr;
     private Button  frag;
     private Button auto;
-
+    private Button so;
 
     private static final String email_txt = "1";
     private static final String pass_txt  = "1";
@@ -41,9 +41,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         login();
 
-
-
-
     }
 
 
@@ -54,13 +51,14 @@ public class MainActivity extends AppCompatActivity {
 
 
         public void login () {
-    email = (EditText)findViewById(R.id.Email);
+    email = (EditText)findViewById(R.id.Email);   //назаначение id кнопок
     pass = (EditText)findViewById(R.id.Password);
     enter = (Button)findViewById(R.id.Enter);
     registr = (Button)findViewById(R.id.Registr);
     //img = (ImageView)findViewById(R.id.Back);
     frag = (Button)findViewById(R.id.Fragment);
     auto = (Button)findViewById(R.id.empt2);
+    so = (Button)findViewById(R.id.soundbutton);
     
 
                         enter.setOnClickListener(
@@ -116,7 +114,18 @@ public class MainActivity extends AppCompatActivity {
                     }
             );
 
+            so.setOnClickListener(
+                    new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent("com.example.autoriz.sound");
+                            startActivity(intent);
+                        }
                     }
+            );
+
+
+        }
 
 
     }

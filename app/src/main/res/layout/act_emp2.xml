@@ -21,10 +21,10 @@
         app:layout_constraintVertical_bias="0.51" />
 
     <AutoCompleteTextView
+        android:hint="Марка авто"
         android:id="@+id/autoCompleteTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="AutoCompleteTextView"
         app:layout_constraintBottom_toTopOf="@+id/field"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -40,8 +40,8 @@ public class Empty2 extends AppCompatActivity implements
         gd.setOnDoubleTapListener(this);
         txt_view = (AutoCompleteTextView)findViewById(R.id.autoCompleteTextView);
 
-        ArrayAdapter adapt = new ArrayAdapter(this, android.R.layout.select_dialog_item, cars); //адаптер для считывания и вывода
-        txt_view.setThreshold(1);  //
+        ArrayAdapter adapt = new ArrayAdapter(this, android.R.layout.select_dialog_item, cars); //адаптер массива для считывания и вывода
+        txt_view.setThreshold(1);  //если значение ноль показывает все слова (1) - показывает после первого символа
         txt_view.setAdapter(adapt); //вывод автокомплита через адаптер
 
     }

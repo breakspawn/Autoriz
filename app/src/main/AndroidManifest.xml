@@ -9,6 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".sound">
+            <intent-filter>
+                <action android:name="com.example.autoriz.sound" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
         <activity android:name=".Empty2">
             <intent-filter>
                 <action android:name="com.example.autoriz.Empty2" />
