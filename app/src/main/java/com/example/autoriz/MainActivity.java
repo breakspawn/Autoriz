@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText pass;
     private Button enter;
     private Button registr;
+    private Button  frag;
 
 
     private static final String email_txt = "1";
@@ -41,18 +42,30 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
     }
 
 
 
 
 
-    public void login () {
+
+
+
+        public void login () {
     email = (EditText)findViewById(R.id.Email);
     pass = (EditText)findViewById(R.id.Password);
     enter = (Button)findViewById(R.id.Enter);
     registr = (Button)findViewById(R.id.Registr);
     img = (ImageView)findViewById(R.id.Back);
+    frag = (Button)findViewById(R.id.Fragment);
+    
+
+
+
+
+
+
 
 
 
@@ -88,6 +101,16 @@ public class MainActivity extends AppCompatActivity {
 
                                 }
                         );
+
+            frag.setOnClickListener(
+                    new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent("com.example.autoriz.Frag");
+                            startActivity(intent);
+                        }
+                    }
+            );
 
                     }
 

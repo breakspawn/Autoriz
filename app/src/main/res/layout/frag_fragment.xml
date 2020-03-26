@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Frag1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+
+    tools:context=".Frag">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:onClick="Change"
+            android:text="Fragment 1"/>
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="Change"
+            tools:layout="@layout/fragment_blank2"
+            android:text="Fragment 2"/>
+
+        <fragment
+            android:id="@+id/fragmentos"
+            android:name="com.example.autoriz.Blank1"
+            android:layout_width="404dp"
+            android:layout_height="538dp"
+            tools:layout="@layout/fragment_blank1" />
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

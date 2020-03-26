@@ -36,6 +36,8 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:progress="0"
+        android:max="5"
         app:tickMarkTint="#5C2222" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

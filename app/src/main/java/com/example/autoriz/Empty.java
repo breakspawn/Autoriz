@@ -27,6 +27,7 @@ public class Empty extends AppCompatActivity {
         list.setAdapter(adapter);
         seek = (SeekBar)findViewById(R.id.seekBar); //ползунок переменная seek
 
+        
         list.setOnItemClickListener(
                 new AdapterView.OnItemClickListener() {
                     @Override
