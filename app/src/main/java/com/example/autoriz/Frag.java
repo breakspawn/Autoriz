@@ -21,9 +21,9 @@ public class Frag extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.frag_fragment);
     }
-        public void Change (View view) {
-            Fragment fragment = null;
-            switch (view.getId()) {
+        public void Change (View view) {  //работа с фрагментами
+            Fragment fragment = null; //назначение фрагмента ноль
+            switch (view.getId()) {   //переключение фрагмента Blank1 Blank2 пустые только цвет в xml файле
                 case R.id.button4:
                     fragment = new Blank1();
                     break;
