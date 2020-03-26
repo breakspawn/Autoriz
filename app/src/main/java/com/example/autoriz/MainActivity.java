@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     private Button  frag;
     private Button auto;
     private Button so;
+    private Button wrbt;
 
     private static final String email_txt = "1";
     private static final String pass_txt  = "1";
@@ -59,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
     frag = (Button)findViewById(R.id.Fragment);
     auto = (Button)findViewById(R.id.empt2);
     so = (Button)findViewById(R.id.soundbutton);
+    wrbt = (Button)findViewById(R.id.writebutton2);
     
 
                         enter.setOnClickListener(
@@ -119,6 +121,15 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void onClick(View v) {
                             Intent intent = new Intent("com.example.autoriz.sound");
+                            startActivity(intent);
+                        }
+                    }
+            );
+            wrbt.setOnClickListener(
+                    new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent("com.example.autoriz.writeRead");
                             startActivity(intent);
                         }
                     }
