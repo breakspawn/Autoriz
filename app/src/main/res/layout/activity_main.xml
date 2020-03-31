@@ -12,39 +12,44 @@
     tools:visibility="visible">
 
 
+
     <ImageView
         android:id="@+id/bomzh"
         android:layout_width="290dp"
         android:layout_height="200dp"
+        android:layout_marginTop="27dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
         app:srcCompat="@drawable/bomzh1" />
 
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="356dp"
-        android:layout_height="304dp"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.567"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.563"
+        app:layout_constraintVertical_bias="0.583"
         tools:ignore="MissingConstraints">
 
         <LinearLayout
-            android:layout_width="179dp"
-            android:layout_height="274dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:orientation="vertical">
 
             <Button
                 android:id="@+id/Enter"
                 android:layout_width="150dp"
                 android:layout_height="50dp"
-                android:layout_margin="5dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="8dp"
                 android:background="@drawable/fields"
                 android:backgroundTint="#A2B8A8"
                 android:text="ВХОД"
@@ -54,7 +59,8 @@
                 android:id="@+id/writebutton2"
                 android:layout_width="150dp"
                 android:layout_height="50dp"
-                android:layout_margin="5dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="8dp"
                 android:background="@drawable/fields"
                 android:backgroundTint="#A2B8A8"
                 android:text="Write Read"
@@ -64,7 +70,8 @@
                 android:id="@+id/soundBt"
                 android:layout_width="150dp"
                 android:layout_height="50dp"
-                android:layout_margin="5dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="8dp"
                 android:background="@drawable/fields"
                 android:backgroundTint="#A2B8A8"
                 android:text="Звуки"
@@ -74,7 +81,8 @@
                 android:id="@+id/Fragment"
                 android:layout_width="150dp"
                 android:layout_height="50dp"
-                android:layout_margin="5dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="8dp"
                 android:background="@drawable/fields"
                 android:backgroundTint="#A2B8A8"
                 android:text="Фрагмент"
@@ -83,15 +91,17 @@
 
         <LinearLayout
 
-            android:layout_width="176dp"
-            android:layout_height="271dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:orientation="vertical">
 
             <Button
                 android:id="@+id/Registr"
                 android:layout_width="150dp"
                 android:layout_height="50dp"
-                android:layout_margin="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="8dp"
                 android:background="@drawable/fields"
                 android:backgroundTint="#A2B8A8"
                 android:text="Регистрация"
@@ -102,7 +112,8 @@
                 android:id="@+id/TestBT"
                 android:layout_width="150dp"
                 android:layout_height="50dp"
-                android:layout_margin="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="8dp"
                 android:background="@drawable/fields"
                 android:backgroundTint="#A2B8A8"
                 android:text="Тест"
@@ -113,7 +124,8 @@
                 android:id="@+id/browserButton"
                 android:layout_width="150dp"
                 android:layout_height="50dp"
-                android:layout_margin="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="8dp"
                 android:background="@drawable/fields"
                 android:backgroundTint="#A2B8A8"
                 android:text="Браузер"
@@ -124,7 +136,8 @@
                 android:id="@+id/empt"
                 android:layout_width="150dp"
                 android:layout_height="50dp"
-                android:layout_margin="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="8dp"
                 android:background="@drawable/fields"
                 android:backgroundTint="#A2B8A8"
                 android:text="Жесты"
@@ -134,25 +147,25 @@
 
     <LinearLayout
         android:id="@+id/linearLayout3"
-        android:layout_width="382dp"
+        android:layout_width="match_parent"
         android:layout_height="277dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="@+id/bomzh"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintHorizontal_bias="0.448"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintVertical_bias="0.05">
 
         <TextView
             android:id="@+id/textView"
-            android:textColor="@color/colorWhite"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="14pt"
-            android:layout_marginLeft="60dp"
+            android:layout_marginLeft="80dp"
             android:layout_marginTop="10dp"
-            android:text="Бомжур господа" />
+            android:text="Бомжур господа"
+            android:textColor="@color/colorWhite"
+            android:textSize="14pt" />
 
         <EditText
             android:id="@+id/Email"

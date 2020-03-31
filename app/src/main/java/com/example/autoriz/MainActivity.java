@@ -12,6 +12,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 
 public class MainActivity extends AppCompatActivity
 {
@@ -28,6 +30,8 @@ public class MainActivity extends AppCompatActivity
     private Button testButton;
     private ImageView bomzh;
     private MediaPlayer bomzhSound;
+    private Animation animLeft;
+    private Animation animRight;
 
     private static final String email_txt = "1";
     private static final String pass_txt  = "1";
@@ -39,6 +43,8 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         login();
     }
+
+
 
     public void login ()
     {
@@ -58,6 +64,9 @@ public class MainActivity extends AppCompatActivity
 
     bomzh = (ImageView)findViewById(R.id.bomzh);
     bomzhSound = MediaPlayer.create(this,R.raw.murloc);
+    animLeft = AnimationUtils.loadAnimation(this, R.anim.anim_translete1);
+    animRight = AnimationUtils.loadAnimation(this, R.anim.anim_translete);
+
 
 
 
@@ -68,10 +77,11 @@ public class MainActivity extends AppCompatActivity
                     public void onClick(View v) {
                         bomzhSound.start();
                         Toast.makeText(MainActivity.this, "Вы напугали деда", Toast.LENGTH_SHORT).show();
-
-                    }
+                        v.startAnimation(animRight);
+                        }
                 }
         );
+
                         enter.setOnClickListener(
                                 new View.OnClickListener()
                                 {
@@ -84,6 +94,7 @@ public class MainActivity extends AppCompatActivity
                                             Toast.makeText(MainActivity.this, "Верный пароль",
                                                     Toast.LENGTH_LONG
                                             ).show();
+                                            v.startAnimation(animLeft);
                                         }
                                          else
                                         {
@@ -103,6 +114,7 @@ public class MainActivity extends AppCompatActivity
                                         Toast.makeText(MainActivity.this, "Успешная регистрация",
                                                 Toast.LENGTH_LONG
                                         ).show();
+                                        v.startAnimation(animRight);
                                     }
 
                                 }
@@ -115,6 +127,7 @@ public class MainActivity extends AppCompatActivity
                         {
                             Intent intent = new Intent("com.example.autoriz.Frag");
                             startActivity(intent);
+                            v.startAnimation(animLeft);
                         }
                     }
             );
@@ -126,6 +139,7 @@ public class MainActivity extends AppCompatActivity
                         {
                             Intent intent = new Intent("com.example.autoriz.Empty2");
                             startActivity(intent);
+                            v.startAnimation(animRight);
                         }
                     }
             );
@@ -135,6 +149,7 @@ public class MainActivity extends AppCompatActivity
                         public void onClick(View v) {
                             Intent intent = new Intent("com.example.autoriz.sound");
                             startActivity(intent);
+                            v.startAnimation(animLeft);
                         }
                     }
             );
@@ -144,6 +159,7 @@ public class MainActivity extends AppCompatActivity
                         public void onClick(View v) {
                             Intent intent = new Intent("com.example.autoriz.writeRead");
                             startActivity(intent);
+                            v.startAnimation(animLeft);
                         }
                     }
             );
@@ -155,6 +171,7 @@ public class MainActivity extends AppCompatActivity
                         {
                             Intent intent = new Intent("com.example.autoriz.browser");
                             startActivity(intent);
+                            v.startAnimation(animRight);
                         }
                     }
             );
@@ -164,11 +181,13 @@ public class MainActivity extends AppCompatActivity
                         public void onClick(View v) {
                              Intent intent = new Intent("com.example.autoriz.testprog");
                              startActivity(intent);
+                            v.startAnimation(animRight);
                             }
 
                     }
             );
         }
+
     }
 
 
