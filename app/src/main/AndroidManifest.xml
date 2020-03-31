@@ -32,9 +32,11 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".sound">
+        <activity android:name=".sound"
+             android:theme="@style/AppTheme.slidrActivityTheme">
             <intent-filter>
                 <action android:name="com.example.autoriz.sound" />
+
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
@@ -60,7 +62,8 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:theme="@style/AppTheme.slidrActivityTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

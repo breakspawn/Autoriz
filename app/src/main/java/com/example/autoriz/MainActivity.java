@@ -15,6 +15,9 @@ import android.widget.Toast;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 
+import com.r0adkll.slidr.Slidr;
+import com.r0adkll.slidr.model.SlidrInterface;
+
 public class MainActivity extends AppCompatActivity
 {
     private ImageView img;  //назнаение переменных
@@ -36,12 +39,16 @@ public class MainActivity extends AppCompatActivity
     private static final String email_txt = "1";
     private static final String pass_txt  = "1";
 
+    private SlidrInterface slide;
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         login();
+
+
     }
 
 
@@ -67,7 +74,7 @@ public class MainActivity extends AppCompatActivity
     animLeft = AnimationUtils.loadAnimation(this, R.anim.anim_translete1);
     animRight = AnimationUtils.loadAnimation(this, R.anim.anim_translete);
 
-
+    slide = Slidr.attach(this);
 
 
 
@@ -81,6 +88,7 @@ public class MainActivity extends AppCompatActivity
                         }
                 }
         );
+
 
                         enter.setOnClickListener(
                                 new View.OnClickListener()

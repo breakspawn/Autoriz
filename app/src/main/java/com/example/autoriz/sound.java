@@ -7,11 +7,16 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.r0adkll.slidr.Slidr;
+import com.r0adkll.slidr.model.SlidrInterface;
+
 public class sound extends AppCompatActivity {
     private ImageView cat;
     private ImageView dog;
     private ImageView golub;
     private MediaPlayer catSound, dogSound, golubSound;
+    private SlidrInterface slide;
+
 
 
 
@@ -27,7 +32,7 @@ public class sound extends AppCompatActivity {
         catSound = MediaPlayer.create(this, R.raw.cats);
         dogSound = MediaPlayer.create(this, R.raw.dogs);
         golubSound = MediaPlayer.create(this, R.raw.omae);
-
+        slide = Slidr.attach(this);
 
         imageClick ();
 
@@ -35,6 +40,7 @@ public class sound extends AppCompatActivity {
 
     public void soundPlay(MediaPlayer mediaPlayer) {
         mediaPlayer.start();
+
     }
 
 
