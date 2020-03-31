@@ -34,7 +34,6 @@ public class writeRead extends AppCompatActivity {
         txt_edit = (EditText)findViewById(R.id.editText);
         txt_show = (TextView)findViewById(R.id.textV);
         buttonWR();
-
     }
 
     public void buttonWR () {
@@ -44,7 +43,6 @@ public class writeRead extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                        readTxt();
-
                     }
                 }
         );
@@ -57,7 +55,7 @@ public class writeRead extends AppCompatActivity {
                 }
         );
     }
-
+//чтение текса из файла
     public void readTxt () {
         try {
             InputStream fileInput = openFileInput("example.txt");
@@ -65,18 +63,20 @@ public class writeRead extends AppCompatActivity {
             BufferedReader buffer = new BufferedReader(reader);
             StringBuffer strBuffer = new StringBuffer();
             String lines;
-            while ((lines = buffer.readLine()) != null) {strBuffer.append(lines).append("\n");
-            txt_show.setText(strBuffer);
+            while ((lines = buffer.readLine()) != null) //цикл
+            {
+            strBuffer.append(lines).append("\n");
             }
+            txt_show.setText(strBuffer);
         }
-        catch (FileNotFoundException e) {e.printStackTrace();
+        catch (FileNotFoundException e) {
+            e.printStackTrace();
         }
         catch (IOException e) {
             e.printStackTrace();
         }
-
-
     }
+    //запись текста в файл
     public void writeTxt () {
         String mytxt = txt_edit.getText().toString();
         try {
@@ -86,11 +86,11 @@ public class writeRead extends AppCompatActivity {
                 txt_edit.setText("");
             Toast.makeText(writeRead.this,"Текст сохранен", Toast.LENGTH_LONG).show();
         }
-        catch (FileNotFoundException e) {e.printStackTrace();
+        catch (FileNotFoundException e) {
+            e.printStackTrace();
         }
         catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 }

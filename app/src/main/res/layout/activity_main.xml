@@ -11,166 +11,176 @@
     tools:context=".MainActivity"
     tools:visibility="visible">
 
-    <Button
-        android:id="@+id/writebutton2"
-        android:layout_width="124dp"
-        android:layout_height="47dp"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/fields"
-        android:backgroundTint="#A2B8A8"
-        android:text="Write Read"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.787"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Fragment"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/soundbutton"
-        android:layout_width="124dp"
-        android:layout_height="47dp"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/fields"
-        android:backgroundTint="#A2B8A8"
-        android:text="Звуки"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.156"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Fragment"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/Registr"
-        android:layout_width="169dp"
-        android:layout_height="44dp"
-        android:background="@drawable/fields"
-        android:backgroundTint="#A2B8A8"
-        android:text="Регистрация"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.432"
-        app:layout_constraintStart_toEndOf="@+id/Enter"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.417" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/bomzh"
         android:layout_width="290dp"
         android:layout_height="200dp"
-        android:layout_marginTop="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Enter"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/a" />
+        app:srcCompat="@drawable/bomzh1" />
 
-    <EditText
-        android:id="@+id/Email"
-        android:layout_width="366dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/fields"
-        android:ems="10"
-
-        android:hint="Email"
-        android:inputType="textEmailAddress"
-        android:padding="10sp"
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="356dp"
+        android:layout_height="304dp"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.622"
+        app:layout_constraintHorizontal_bias="0.567"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.242" />
+        app:layout_constraintVertical_bias="0.563"
+        tools:ignore="MissingConstraints">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="72dp"
-        android:layout_marginBottom="24dp"
-        android:fontFamily="@font/titan_one"
-        android:text="Autorization"
-        android:textAlignment="center"
-        android:textAllCaps="true"
-        android:textColor="#E39F9F"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        <LinearLayout
+            android:layout_width="179dp"
+            android:layout_height="274dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/Enter"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/fields"
+                android:backgroundTint="#A2B8A8"
+                android:text="ВХОД"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/writebutton2"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/fields"
+                android:backgroundTint="#A2B8A8"
+                android:text="Write Read"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/soundBt"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/fields"
+                android:backgroundTint="#A2B8A8"
+                android:text="Звуки"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/Fragment"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/fields"
+                android:backgroundTint="#A2B8A8"
+                android:text="Фрагмент"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_width="176dp"
+            android:layout_height="271dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/Registr"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/fields"
+                android:backgroundTint="#A2B8A8"
+                android:text="Регистрация"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/TestBT"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/fields"
+                android:backgroundTint="#A2B8A8"
+                android:text="Тест"
+                android:textSize="20sp" />
+
+            <Button
+
+                android:id="@+id/browserButton"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/fields"
+                android:backgroundTint="#A2B8A8"
+                android:text="Браузер"
+                android:textSize="20sp" />
+
+            <Button
+
+                android:id="@+id/empt"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/fields"
+                android:backgroundTint="#A2B8A8"
+                android:text="Жесты"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="382dp"
+        android:layout_height="277dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/bomzh"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.053" />
+        app:layout_constraintVertical_bias="0.0">
 
-    <Button
-        android:id="@+id/Enter"
-        android:layout_width="131dp"
-        android:layout_height="45dp"
-        android:background="@drawable/fields"
-        android:backgroundTint="#A2B8A8"
-        android:text="Войти"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.132"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.418" />
+        <TextView
+            android:id="@+id/textView"
+            android:textColor="@color/colorWhite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14pt"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="10dp"
+            android:text="Бомжур господа" />
 
-    <EditText
-        android:id="@+id/Password"
-        android:layout_width="367dp"
-        android:layout_height="53dp"
+        <EditText
+            android:id="@+id/Email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
 
-        android:layout_marginBottom="24dp"
-        android:background="@drawable/fields"
-        android:ems="10"
-        android:hint="Password"
-        android:inputType="textPassword"
-        android:padding="15sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.636"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.336" />
+            android:layout_marginTop="30dp"
+            android:background="@drawable/fields"
+            android:ems="10"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:padding="15dp"
+            android:paddingTop="30dp" />
 
-    <Button
-        android:id="@+id/empt2"
-        android:layout_width="167dp"
-        android:layout_height="47dp"
-        android:layout_marginBottom="8dp"
-        android:background="@drawable/fields"
-        android:backgroundTint="#A2B8A8"
-        android:text="Жесты"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.447"
-        app:layout_constraintStart_toEndOf="@+id/Enter"
-        app:layout_constraintTop_toBottomOf="@+id/Registr"
-        app:layout_constraintVertical_bias="0.087" />
+        <EditText
+            android:id="@+id/Password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:layout_marginTop="1dp"
+            android:background="@drawable/fields"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="15sp"
+            android:paddingTop="30dp" />
 
-    <Button
-        android:id="@+id/Fragment"
-        android:layout_width="124dp"
-        android:layout_height="47dp"
-        android:background="@drawable/fields"
-        android:backgroundTint="#A2B8A8"
-        android:text="Фрагмент"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/empt2"
-        app:layout_constraintHorizontal_bias="0.578"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Enter"
-        app:layout_constraintVertical_bias="0.076" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

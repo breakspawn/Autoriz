@@ -12,11 +12,11 @@
 
     <ListView
         android:id="@+id/activ"
-        android:layout_width="408dp"
-        android:layout_height="310dp"
+        android:layout_width="389dp"
+        android:layout_height="325dp"
         android:backgroundTint="#FFFFFF"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteX="2dp"
         tools:layout_editor_absoluteY="0dp" />
 
 
@@ -27,7 +27,7 @@
         android:backgroundTint="#706161"
         android:foregroundTint="#631515"
         android:indeterminateTint="#CFA0A0"
-        android:max="5"
+        android:max="100"
         android:progress="0"
         android:progressBackgroundTint="#BC1F1F"
         android:progressTint="#FFFFFF"
