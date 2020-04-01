@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity
     private MediaPlayer bomzhSound;
     private Animation animLeft;
     private Animation animRight;
+    private Button dataBaseButton;
 
     private static final String email_txt = "1";
     private static final String pass_txt  = "1";
@@ -47,17 +48,11 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         login();
-
-
     }
-
-
 
     public void login ()
     {
-
-
-        email = (EditText)findViewById(R.id.Email);   //назаначение id кнопок
+    email = (EditText)findViewById(R.id.Email);   //назаначение id кнопок
     pass = (EditText)findViewById(R.id.Password);
     enter = (Button)findViewById(R.id.Enter);
     registr = (Button)findViewById(R.id.Registr);
@@ -67,7 +62,8 @@ public class MainActivity extends AppCompatActivity
     so = (Button)findViewById(R.id.soundBt);
     wrbt = (Button)findViewById(R.id.writebutton2);
     browseButton = (Button)findViewById(R.id.browserButton);
-    testButton = (Button) findViewById(R.id.TestBT);
+    testButton = (Button)findViewById(R.id.TestBT);
+    dataBaseButton = (Button)findViewById(R.id.dataBaseBD);
 
     bomzh = (ImageView)findViewById(R.id.bomzh);
     bomzhSound = MediaPlayer.create(this,R.raw.murloc);
@@ -76,57 +72,71 @@ public class MainActivity extends AppCompatActivity
 
     slide = Slidr.attach(this);
 
-
-
-        bomzh.setOnClickListener(
-                new View.OnClickListener() {
+        dataBaseButton.setOnClickListener(
+                new View.OnClickListener()
+                {
                     @Override
                     public void onClick(View v) {
-                        bomzhSound.start();
-                        Toast.makeText(MainActivity.this, "Вы напугали деда", Toast.LENGTH_SHORT).show();
-                        v.startAnimation(animRight);
-                        }
+                        Intent intent = new Intent("com.example.autoriz.dataBase");
+                        startActivity(intent);
+                        v.startAnimation(animLeft);
+                    }
                 }
         );
 
+        bomzh.setOnClickListener(
+                new View.OnClickListener()
+                    {
+                        @Override
+                        public void onClick(View v) {
+                            bomzhSound.start();
+                            Toast.makeText(MainActivity.this, "Вы напугали деда",
+                                    Toast.LENGTH_SHORT
+                            ).show();
+                            v.startAnimation(animRight);
+                        }
+                    }
+        );
 
-                        enter.setOnClickListener(
-                                new View.OnClickListener()
-                                {
-                                    @Override
-                                    public void onClick(View v)
-                                    {
-                                        if (email_txt.equals(String.valueOf(email.getText())) && pass_txt.equals(String.valueOf(pass.getText()))) {
-                                            Intent intent = new Intent("com.example.autoriz.Empty");
-                                        startActivity(intent);
-                                            Toast.makeText(MainActivity.this, "Верный пароль",
-                                                    Toast.LENGTH_LONG
-                                            ).show();
-                                            v.startAnimation(animLeft);
-                                        }
-                                         else
-                                        {
-                                            Toast.makeText(MainActivity.this, "Неверный пароль",
-                                                    Toast.LENGTH_LONG
-                                            ).show();
-                                        }
-                                    }
-                               }
-                        );
-                        registr.setOnClickListener(
-                                new View.OnClickListener()
-                                {
-                                    @Override
-                                    public void onClick(View v)
-                                    {
-                                        Toast.makeText(MainActivity.this, "Успешная регистрация",
-                                                Toast.LENGTH_LONG
-                                        ).show();
-                                        v.startAnimation(animRight);
-                                    }
 
-                                }
-                        );
+        enter.setOnClickListener(
+
+        new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if (email_txt.equals(String.valueOf(email.getText()))
+                        && pass_txt.equals(String.valueOf(pass.getText()))) {
+                    Intent intent = new Intent("com.example.autoriz.Empty");
+                    startActivity(intent);
+                    Toast.makeText(MainActivity.this, "Верный пароль",
+                            Toast.LENGTH_LONG
+                    ).show();
+                    v.startAnimation(animLeft);
+                } else {
+                    Toast.makeText(MainActivity.this, "Неверный пароль",
+                            Toast.LENGTH_LONG
+                    ).show();
+                }
+
+            }
+        }
+        );
+
+            registr.setOnClickListener(
+                new View.OnClickListener()
+                {
+                    @Override
+                    public void onClick(View v)
+                    {
+                        Toast.makeText(MainActivity.this, "Успешная регистрация",
+                                Toast.LENGTH_LONG
+                        ).show();
+                        v.startAnimation(animRight);
+                    }
+
+                }
+            );
             frag.setOnClickListener(
                     new View.OnClickListener()
                     {
@@ -140,59 +150,59 @@ public class MainActivity extends AppCompatActivity
                     }
             );
             auto.setOnClickListener(
-                    new View.OnClickListener()
+                new View.OnClickListener()
+                {
+                    @Override
+                    public void onClick(View v)
                     {
-                        @Override
-                        public void onClick(View v)
-                        {
-                            Intent intent = new Intent("com.example.autoriz.Empty2");
-                            startActivity(intent);
-                            v.startAnimation(animRight);
-                        }
+                        Intent intent = new Intent("com.example.autoriz.Empty2");
+                        startActivity(intent);
+                        v.startAnimation(animRight);
                     }
+                }
             );
             so.setOnClickListener(
-                    new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            Intent intent = new Intent("com.example.autoriz.sound");
-                            startActivity(intent);
-                            v.startAnimation(animLeft);
-                        }
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent("com.example.autoriz.sound");
+                        startActivity(intent);
+                        v.startAnimation(animLeft);
                     }
+                }
             );
             wrbt.setOnClickListener(
-                    new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            Intent intent = new Intent("com.example.autoriz.writeRead");
-                            startActivity(intent);
-                            v.startAnimation(animLeft);
-                        }
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent("com.example.autoriz.writeRead");
+                        startActivity(intent);
+                        v.startAnimation(animLeft);
                     }
+                }
             );
             browseButton.setOnClickListener(
-                    new View.OnClickListener()
+                new View.OnClickListener()
+                {
+                    @Override
+                    public void onClick(View v)
                     {
-                        @Override
-                        public void onClick(View v)
-                        {
-                            Intent intent = new Intent("com.example.autoriz.browser");
-                            startActivity(intent);
-                            v.startAnimation(animRight);
-                        }
+                        Intent intent = new Intent("com.example.autoriz.browser");
+                        startActivity(intent);
+                        v.startAnimation(animRight);
                     }
+                }
             );
             testButton.setOnClickListener(
-                    new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                             Intent intent = new Intent("com.example.autoriz.testprog");
-                             startActivity(intent);
-                            v.startAnimation(animRight);
-                            }
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                         Intent intent = new Intent("com.example.autoriz.testprog");
+                         startActivity(intent);
+                        v.startAnimation(animRight);
+                        }
 
-                    }
+                }
             );
         }
 

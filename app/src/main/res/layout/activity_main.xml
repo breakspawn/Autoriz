@@ -89,6 +89,17 @@
                 android:backgroundTint="#A2B8A8"
                 android:text="Фрагмент"
                 android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/dataBaseBD"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/fields"
+                android:backgroundTint="#A2B8A8"
+                android:text="Бд"
+                android:textSize="20sp" />
         </LinearLayout>
 
         <LinearLayout

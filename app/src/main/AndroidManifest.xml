@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.autoriz">
-    <uses-permission
-        android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/bomzh"
         android:label="это ебанное приложение"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        >
+        android:theme="@style/AppTheme">
+        <activity android:name=".dataBase"
+            android:theme="@style/AppTheme.slidrActivityTheme">
+        <intent-filter>
+            <action android:name="com.example.autoriz.dataBase" />
+
+            <category android:name="android.intent.category.DEFAULT" />
+        </intent-filter>
+        </activity>
         <activity android:name=".testprog">
             <intent-filter>
                 <action android:name="com.example.autoriz.testprog" />
@@ -32,11 +40,11 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".sound"
-             android:theme="@style/AppTheme.slidrActivityTheme">
+        <activity
+            android:name=".sound"
+            android:theme="@style/AppTheme.slidrActivityTheme">
             <intent-filter>
                 <action android:name="com.example.autoriz.sound" />
-
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
@@ -62,7 +70,8 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"
+        <activity
+            android:name=".MainActivity"
             android:theme="@style/AppTheme.slidrActivityTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
