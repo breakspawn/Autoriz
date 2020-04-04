@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.util.Pair;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -105,19 +106,22 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View v) {
 
-                if (email_txt.equals(String.valueOf(email.getText()))
-                        && pass_txt.equals(String.valueOf(pass.getText()))) {
-                    Intent intent = new Intent("com.example.autoriz.Empty");
-                    startActivity(intent);
-                    Toast.makeText(MainActivity.this, "Верный пароль",
-                            Toast.LENGTH_LONG
-                    ).show();
-                    v.startAnimation(animLeft);
-                } else {
-                    Toast.makeText(MainActivity.this, "Неверный пароль",
-                            Toast.LENGTH_LONG
-                    ).show();
-                }
+
+        DataBaseWorker worker = new DataBaseWorker(MainActivity.this);
+        if(worker.equals(worker.T_USERS, String.valueOf(email.getText()), worker.F_PASS, String.valueOf(pass.getText())))
+        {
+            Intent intent = new Intent("com.example.autoriz.Empty");
+            startActivity(intent);
+            Toast.makeText(MainActivity.this, "Верный пароль",
+                    Toast.LENGTH_LONG
+            ).show();
+            v.startAnimation(animLeft);
+        } else {
+            Toast.makeText(MainActivity.this, "Неверный пароль",
+                    Toast.LENGTH_LONG
+            ).show();
+        }
+
 
             }
         }
@@ -129,11 +133,23 @@ public class MainActivity extends AppCompatActivity
                     @Override
                     public void onClick(View v)
                     {
-                        Toast.makeText(MainActivity.this, "Успешная регистрация",
+
+                        DataBaseWorker w = new DataBaseWorker(MainActivity.this);
+                        Pair [] pairs = new Pair[] {
+                                new Pair(w.F_NAME, String.valueOf(email.getText())),
+                                new Pair(w.F_PASS, String.valueOf(pass.getText())),
+                        };
+
+                        String message = "Ошибка";
+                        if(w.insert(w.T_USERS, pairs))
+                        {
+                            message = "Успешная регистрация";
+                        }
+                        Toast.makeText(MainActivity.this, message,
                                 Toast.LENGTH_LONG
                         ).show();
                         v.startAnimation(animRight);
-                    }
+                            }
 
                 }
             );
